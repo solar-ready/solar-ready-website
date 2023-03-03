@@ -19,8 +19,22 @@ Route::get('/', function () {
 
 Route::get('/parceiros', function () {
     return view('parceiros');
+}); 
+
+Route::get('/teste', function () {
+    return view('teste');
+}); 
+Route::get('/servicos', function () {
+    return view('servicos');
 });
 
+Route::get('/contacto', function () {
+    return view('contacto');
+});
+
+Route::get('/graficos', function () {
+    return view('graficos');
+});
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),

@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Homepage</title>
+  <title>Contacto</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -25,7 +25,6 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  
 
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
@@ -52,96 +51,95 @@
 
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
-     
-      
-      
       <nav id="navbar" class="navbar">
-      
-      
-          <ul>
-             <li><a href="/" class="active">Home</a></li>
+        <ul>
+
+             <li><a href="/">Home</a></li>
              <li><a href="parceiros">Parceiros</a></li>
-             <li><a href="contacto">Contacto</a></li>
+             <li><a href="contacto" class="active">Contacto</a></li>
              @if(!Auth::user())
              <li><a href="login">Iniciar sessão</a></li>
             @endif
              @if(Auth::user())
              <li><a href="{{route('logout')}}">Terminar sessão</a></li>
              @endif
-          </ul>
-      
+          
+        </ul>
       </nav><!-- .navbar -->
-    
+
     </div>
   </header><!-- End Header -->
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="hero">
+  <main id="main">
 
-    <div class="info d-flex align-items-center">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-6 text-center">
-            <h2 data-aos="fade-down"> <span>Solar Ready</span></h2>
-            <p data-aos="fade-up"></p>
-            @if(Auth::check())
-            <a data-aos="fade-up" data-aos-delay="200" href="/graficos" class="btn-get-started">Visualize dos gráficos</a>
-          @endif
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/breadcrumbs-bg.jpg');">
+      <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+
+        <h2>Contacto</h2>
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li>Contacto</li>
+        </ol>
+
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+          <div class="col-lg-6">
+            <div class="info-item  d-flex flex-column justify-content-center align-items-center">
+              <i class="bi bi-map"></i>
+              <h3>Endereço</h3>
+              <p> R. do Covelo 205, 4200-239 Porto</p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center">
+              <i class="bi bi-envelope"></i>
+              <h3>Email</h3>
+              <p>a31089@aluno.filipa-vilhena.edu.pt</p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-item  d-flex flex-column justify-content-center align-items-center">
+              <i class="bi bi-telephone"></i>
+              <h3>Contacto</h3>
+              <p>22 507 2670</p>
+            </div>
+          </div><!-- End Info Item -->
+
+        </div>
+
+        <div class="row gy-4 mt-1">
+
+          <div class="col-lg-6 ">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3003.550548817799!2d-8.610348184581037!3d41.16615767928503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd24645175294571%3A0xd74459da3926e5cc!2sEscola%20Secund%C3%A1ria%20Filipa%20de%20Vilhena!5e0!3m2!1spt-PT!2spt!4v1670925446083!5m2!1spt-PT!2spt" width="550" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div><!-- End Google Maps -->
+          <div class="col-lg-6">
+          <livewire:contactos/>
           </div>
         </div>
+
       </div>
-    </div>
+    </section><!-- End Contact Section -->
 
-    <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-
-      <div class="carousel-item active" style="background-image: url(assets/img/sol.webp)"></div>
-      <div class="carousel-item" style="background-image: url(assets/img/bateria.jpg)"></div>
-
-      <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
-      </a>
-
-      <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
-        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
-      </a>
-
-    </div>
-
-  </section><!-- End Hero Section -->
-
- <!-- ======= About Section ======= -->
- <section id="about" class="about">
-  <div class="container" data-aos="fade-up">
-
-    <div class="row position-relative">
-
-      <div class="col-lg-7 about-img" style="background-image: url(assets/img/arduíno.jpg);"></div>
-
-      <div class="col-lg-7">
-        <h2>Solar Ready</h2>
-        <div class="our-story">
-          <p>Solar Ready é um projeto criado para obter varias vantagens através de uma fonte de energia renovável Sol. O utilizador poderá carregar uma bateria de um telemóvel por exemplo através do sol, que vai fornecer energia ao painel solar que este por sua vez carrega uma bateria que poderá ser ligada a qualquer outro dispositivo ate 5V.</p>
-                    
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End About Section -->
-  
+  </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
 
-    
-       
-
     <div class="footer-legal text-center position-relative">
       <div class="container">
         <div class="copyright">
-           PAP <strong><span>Érico Veloso</span></strong>. TGPSI Escola Secundária Filipa de Vilhena 
+        PAP <strong><span>Érico Veloso</span></strong>. TGPSI Escola Secundária Filipa de Vilhena 
         </div>
-       
-          
+        
       </div>
     </div>
 

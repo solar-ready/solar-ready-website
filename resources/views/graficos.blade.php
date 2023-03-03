@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Parceiros</title>
+  <title>Gráficos</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -25,6 +25,8 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
@@ -36,7 +38,9 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 </head>
-
+<style>
+  
+</style>
 <body>
 
   <!-- ======= Header ======= -->
@@ -54,7 +58,8 @@
       <nav id="navbar" class="navbar">
         <ul>
              <li><a href="/">Home</a></li>
-             <li><a href="parceiros" class="active">Parceiros</a></li>
+             <li><a href="graficos" class="active">Gráficos</a></li>
+             <li><a href="parceiros" >Parceiros</a></li>
              <li><a href="contacto">Contacto</a></li>
              @if(!Auth::user())
              <li><a href="login">Iniciar sessão</a></li>
@@ -71,13 +76,13 @@
   <main id="main">
 
     <!-- ======= Breadcrumbs ======= -->
-    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/eco_escolas.jpg');">
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/arduíno.avif'); height: 1000px">
       <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
 
-        <h2>Eco Escolas</h2>
+        <h2>Gráficos</h2>
         <ol>
           <li><a href="/">Home</a></li>
-          <li>Parceiros</li>
+          <li>Gráficos</li>
         </ol>
 
       </div>
@@ -89,40 +94,63 @@
 
         <div class="row position-relative">
 
-          <div class="col-lg-7 about-img" style="background-image: url(assets/img/Eco_Mascote.jpg);"></div>
+          
 
           <div class="col-lg-7">
-            <h2>Eco Escolas</h2>
-            <div class="our-story">
-              <h4>Fundado em 1996 pela ABAE </h4>
-              <h3>Quem somos</h3>
-              <p>Eco-Escolas é um programa internacional da “Foundation for Environmental Education”, desenvolvido em Portugal desde 1996 pela ABAE. Pretende encorajar ações e reconhecer o trabalho de qualidade desenvolvido pela escola, no âmbito da Educação Ambiental para a Sustentabilidade.
-O programa é coordenado a nível internacional, nacional, regional e de escola. Esta coordenação multinível permite a confluência para objetivos, metodologias e critérios comuns que respeitam a especificidade de cada escola relativamente aos seus alunos e caraterísticas do meio envolvente.</p>
-             
-            <h3>Para Receber a Bandeira Verde:</h3>
-            <h5> A escola tem de demonstrar ter seguido a metodologia dos 7 passos:</h5>
-
-              <ul>
-                <li><i class="bi bi-check-circle"></i> <span>1º Conselho Eco-Escolas,</span></li>
-                <li><i class="bi bi-check-circle"></i> <span>2º Auditoria Ambiental,</span></li>
-                <li><i class="bi bi-check-circle"></i> <span>3º Plano de Ação,</span></li>
-                <li><i class="bi bi-check-circle"></i> <span>4º Trabalho Curricular,</span></li>
-                <li><i class="bi bi-check-circle"></i> <span>5º Monitorização e Avaliação,</span></li>
-                <li><i class="bi bi-check-circle"></i> <span>6º Envolvimento da Comunidade</span></li>
-                <li><i class="bi bi-check-circle"></i> <span>7º Eco-Código.</span></li>
-              </ul>
-              <p>Concretizar pelo menos 2/3 do seu plano de ação;</p>
-              
-              <p>Realizar atividades no âmbito dos temas-base (água, resíduos e energia) e de pelo menos um dos temas do ano (2022-23: espaços exteriores e Biodiversidade: Preservar e Regenerar).</p>
-
-              <div class="watch-video d-flex align-items-center position-relative">
-                <i class="bi bi-play-circle"></i>
-                <a href="https://youtu.be/kNzJp3D21tQ" class="glightbox stretched-link">Assista ao Video</a>
-              </div>
-              <p>Fonte:</p>
-              <a href="https://ecoescolas.abae.pt/sobre/">https://ecoescolas.abae.pt/sobre/</a>
+            <h2>Gráficos</h2>
+            <div>
+              <canvas id="myChart"></canvas>
             </div>
-          </div>
+            <script >
+              const ctx = document.getElementById('myChart');
+              
+              new Chart(ctx, {
+                type: 'line',
+                data: {
+                  labels: ['1H', '2H', '3H', '4H', '5H', '6H', '7H', '8H', '9H', '10H', '11H', '12H', '13H', '14H', '15H', '16H', '17H', '18H', '19H', '20H', '21H', '22H', '23H', '24H'],
+                  datasets: [{
+                    label: 'Temperatura',
+                    data: [12, 19, 3, 5, 2, 3, 10,12,19,10,12,15,16,19,18,20,23,18,12,11,18,19,10,13],
+                    borderWidth: 1
+                  }]
+                },
+                options: {
+                  scales: {
+                    y: {
+                      beginAtZero: true
+                    }
+                  }
+                }
+              });
+            </script>
+
+<div>
+  <canvas id="myChart2"></canvas>
+</div>
+<script>
+  const ctx2 = document.getElementById('myChart2');
+
+  new Chart(ctx2, {
+    type: 'line',
+    data: {
+      labels: ['1H', '2H', '3H', '4H', '5H', '6H', '7H', '8H', '9H', '10H', '11H', '12H', '13H', '14H', '15H', '16H', '17H', '18H', '19H', '20H', '21H', '22H', '23H', '24H'],
+      datasets: [{
+        label: 'Rotação',
+        data: [12, 19, 3, 5, 2, 3, 10,12,19,10,12,15,16,19,18,20,23,18,12,11,18,19,10,13],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+
+
 
         </div>
 
