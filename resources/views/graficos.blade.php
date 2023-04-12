@@ -25,7 +25,8 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js" charset="utf-8"></script>
 
 
   <!-- Template Main CSS File -->
@@ -90,71 +91,29 @@
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
+      <style>
+        .chart-container {
+    height: 400px; /* Defina a altura desejada */
+}
 
-        <div class="row position-relative">
+      </style>
+      <div class="chart-container" data-aos="fade-up">
+
+       
 
           
 
           <div class="col-lg-7">
             <h2>Gráficos</h2>
-            <div>
-              <canvas id="myChart"></canvas>
-            </div>
-            <script >
-              const ctx = document.getElementById('myChart');
-              
-              new Chart(ctx, {
-                type: 'line',
-                data: {
-                  labels: ['1H', '2H', '3H', '4H', '5H', '6H', '7H', '8H', '9H', '10H', '11H', '12H', '13H', '14H', '15H', '16H', '17H', '18H', '19H', '20H', '21H', '22H', '23H', '24H'],
-                  datasets: [{
-                    label: 'Temperatura',
-                    data: [12, 19, 3, 5, 2, 3, 10,12,19,10,12,15,16,19,18,20,23,18,12,11,18,19,10,13],
-                    borderWidth: 1
-                  }]
-                },
-                options: {
-                  scales: {
-                    y: {
-                      beginAtZero: true
-                    }
-                  }
-                }
-              });
-            </script>
-
-<div>
-  <canvas id="myChart2"></canvas>
-</div>
-<script>
-  const ctx2 = document.getElementById('myChart2');
-
-  new Chart(ctx2, {
-    type: 'line',
-    data: {
-      labels: ['1H', '2H', '3H', '4H', '5H', '6H', '7H', '8H', '9H', '10H', '11H', '12H', '13H', '14H', '15H', '16H', '17H', '18H', '19H', '20H', '21H', '22H', '23H', '24H'],
-      datasets: [{
-        label: 'Rotação',
-        data: [12, 19, 3, 5, 2, 3, 10,12,19,10,12,15,16,19,18,20,23,18,12,11,18,19,10,13],
-        borderWidth: 1
-      }]
-    },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true
-        }
-      }
-    }
-  });
-</script>
+          </div>
+        
+          {!! $chart->container() !!}
 
 
-
-        </div>
-
+    
       </div>
+    
+
     </section>
     <!-- End About Section -->
 
@@ -203,7 +162,7 @@
 
 <!-- Template Main JS File -->
 <script src="assets/js/main.js"></script>
-
+{!! $chart->script() !!}
 </body>
 
 </html>

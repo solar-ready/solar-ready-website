@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TemperaturaChart;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,6 +36,8 @@ Route::get('/contacto', function () {
 Route::get('/graficos', function () {
     return view('graficos');
 });
+
+Route::get('/graficos', [TemperaturaChart::class, 'index']);
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),

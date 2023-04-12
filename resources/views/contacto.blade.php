@@ -123,6 +123,8 @@
           </div><!-- End Google Maps -->
           <div class="col-lg-6">
           <livewire:contactos/>
+
+          
           </div>
         </div>
 

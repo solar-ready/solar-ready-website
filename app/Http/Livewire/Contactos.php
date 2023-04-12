@@ -10,7 +10,7 @@ class Contactos extends Component
 
     public function rules(){
         return[
-            'prosposta'=>'required',
+            'nome'=>'required',
             'email'=>'required',
             'assunto'=>'required',
             'mensagem'=>'required',
@@ -29,7 +29,7 @@ class Contactos extends Component
 
     public function create(){
 
-
+       dd($this->modelData());
         $this->validate();
         Contacto::create($this->modelData());
         $this->reset();

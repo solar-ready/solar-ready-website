@@ -74,7 +74,7 @@
     <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/eco_escolas.jpg');">
       <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
 
-        <h2>Eco Escolas</h2>
+        <h2>Escola Secundária Filipa de Vilhena</h2>
         <ol>
           <li><a href="/">Home</a></li>
           <li>Parceiros</li>
@@ -92,7 +92,7 @@
           <div class="col-lg-7 about-img" style="background-image: url(assets/img/Eco_Mascote.jpg);"></div>
 
           <div class="col-lg-7">
-            <h2>Eco Escolas</h2>
+            <h2>Eco Escolas Escola Secundária Filipa de Vilhena</h2>
             <div class="our-story">
               <h4>Fundado em 1996 pela ABAE </h4>
               <h3>Quem somos</h3>
@@ -117,10 +117,8 @@ O programa é coordenado a nível internacional, nacional, regional e de escola.
 
               <div class="watch-video d-flex align-items-center position-relative">
                 <i class="bi bi-play-circle"></i>
-                <a href="https://youtu.be/kNzJp3D21tQ" class="glightbox stretched-link">Assista ao Video</a>
-              </div>
-              <p>Fonte:</p>
-              <a href="https://ecoescolas.abae.pt/sobre/">https://ecoescolas.abae.pt/sobre/</a>
+                <a href="https://www.youtube.com/watch?v=wD6W2P86Agw" class="glightbox stretched-link">Assista ao Video</a>
+              </div>   
             </div>
           </div>
 
